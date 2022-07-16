@@ -2,7 +2,7 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %global upstream_github gnachman
-%global upstream_name iterm2-website
+%global upstream_name iTerm2-shell-integration
 
 
 Summary: iTerm2 Shell Integration
@@ -26,14 +26,14 @@ more—even over ssh. This enables several useful features.
 %prep
 %autosetup -n %{upstream_name}-%{commit}
 # remove first line (shebang)
-sed -i 1d source/shell_integration/bash
+sed -i 1d shell_integration/bash
 
 %build
 # Nothing to do
 
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
-%{__install} -Dp -m0644 source/shell_integration/bash \
+%{__install} -Dp -m0644 shell_integration/bash \
   $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/iterm2.sh
 
 %files
