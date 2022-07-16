@@ -1,4 +1,4 @@
-%global commit be9d982d0e6ceff24b3eb79e15ee7f308e330f60
+%global commit 67e9313f992f824f5102491fcb587611ba948035
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %global upstream_github gnachman
@@ -8,7 +8,7 @@
 Summary: iTerm2 Shell Integration
 Name: iterm2-shell-integration-bash
 Version: 0
-Release: 0.1.20210528git%{shortcommit}%{?dist}
+Release: 0.1.20220717git%{shortcommit}%{?dist}
 License: GPLv2
 URL: https://iterm2.com/documentation-shell-integration.html
 
